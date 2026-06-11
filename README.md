@@ -7,11 +7,12 @@ style monitor for Claude Code sessions around the notch.
 
 ```bash
 brew trust zzcan/island   # required by newer Homebrew for third-party taps
-brew install --cask --no-quarantine zzcan/island/island
+brew install --cask zzcan/island/island
+xattr -dr com.apple.quarantine /Applications/island.app
 ```
 
-`--no-quarantine` is required because island is ad-hoc signed (no Apple
-Developer certificate).
+The xattr step is required because island is ad-hoc signed (no Apple
+Developer certificate); Homebrew 5 removed the --no-quarantine flag.
 
 ## Upgrade
 

@@ -20,11 +20,7 @@ cask "island" do
 
   caveats <<~EOS
     island is ad-hoc signed (no Apple Developer certificate), so Gatekeeper
-    will block it when installed with quarantine. Install with:
-
-      brew install --cask --no-quarantine island
-
-    or clear the flag after install:
+    will block it unless you clear the quarantine flag after install:
 
       xattr -dr com.apple.quarantine "#{appdir}/island.app"
   EOS
