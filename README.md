@@ -6,6 +6,7 @@ style monitor for Claude Code sessions around the notch.
 ## Install
 
 ```bash
+brew trust zzcan/island   # required by newer Homebrew for third-party taps
 brew install --cask --no-quarantine zzcan/island/island
 ```
 
